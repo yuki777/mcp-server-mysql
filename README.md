@@ -31,7 +31,7 @@ To use this server with the Claude Desktop app, add the following configuration 
       "command": "npx",
       "args": [
         "-y",
-        "@benborla/mcp-server-mysql",
+        "@benborla29/mcp-server-mysql",
       ],
       "env": {
         "MYSQL_HOST": "127.0.0.1",
