@@ -1,0 +1,29 @@
+{
+  "name": "@benborla/mcp-server-mysql",
+  "version": "1.0.0",
+  "description": "MCP server for interacting with MySQL databases based on Node",
+  "license": "MIT",
+  "author": "Ben Borla (https://github.com/benborla)",
+  "type": "module",
+  "bin": {
+    "mcp-server-mysql": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/index.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.0.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/mysql": "^2.15.26",
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  }
+}
