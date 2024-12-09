@@ -1,4 +1,5 @@
 # MCP Server for MySQL based on NodeJS
+![Demo](assets/demo.gif)
 
 A Model Context Protocol server that provides read-only access to MySQL databases. This server enables LLMs to inspect database schemas and execute read-only queries.
 
