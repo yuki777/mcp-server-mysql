@@ -28,7 +28,7 @@ To use this server with the Claude Desktop app, add the following configuration 
 ```json
 {
   "mcpServers": {
-    "mysql": {
+    "mcp_server_myqsl": {
       "command": "npx",
       "args": [
         "-y",
@@ -36,7 +36,7 @@ To use this server with the Claude Desktop app, add the following configuration 
       ],
       "env": {
         "MYSQL_HOST": "127.0.0.1",
-        "MYSQL_PORT": "33067",
+        "MYSQL_PORT": "3306",
         "MYSQL_USER": "root",
         "MYSQL_PASS": "",
         "MYSQL_DB": "db_name"
@@ -48,6 +48,35 @@ To use this server with the Claude Desktop app, add the following configuration 
 ```
 
 Replace `/db_name` with your database name or leave it blank to retrieve all databases.
+
+## Troubleshooting
+If you encounter an error "Could not connect to MCP server mcp-server-mysql", you may need to explicitly
+set the path of all required binaries such as the configuration below:
+
+```json
+{
+  "mcpServers": {
+    "mcp_server_myqsl": {
+      "command": "/path/to/npx/binary/npx",
+      "args": [
+        "-y",
+        "@benborla29/mcp-server-mysql",
+      ],
+      "env": {
+        "MYSQL_HOST": "127.0.0.1",
+        "MYSQL_PORT": "3306",
+        "MYSQL_USER": "root",
+        "MYSQL_PASS": "",
+        "MYSQL_DB": "db_name"
+        "PATH": "/path/to/node/bin:/usr/bin:/bin" <-- Add this
+      }
+
+    }
+  }
+}
+```
+
+
 
 ## License
 
