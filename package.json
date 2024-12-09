@@ -8,7 +8,6 @@
   "bin": {
     "mcp-server-mysql": "dist/index.js"
   },
-  "readme": "README.md",
   "files": [
     "dist",
     "README.md"
