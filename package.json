@@ -1,6 +1,6 @@
 {
   "name": "@benborla29/mcp-server-mysql",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "MCP server for interacting with MySQL databases based on Node",
   "license": "MIT",
   "author": "Ben Borla (https://github.com/benborla)",
@@ -13,7 +13,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc && shx chmod +x dist/index.js",
+    "build": "tsc && shx chmod +x dist/*.js",
     "prepare": "npm run build",
     "watch": "tsc --watch"
   },
